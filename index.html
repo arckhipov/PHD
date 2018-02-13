@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Демо: Отзывчивый аккордеон с помощью jQuery</title>
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <meta name="description" content="Пример создания блоков с скрытым содержанием в стиле аккордеон с помощью jQuery" />
+    <meta name="keywords" content="аккордеон, jQuery аккордеон, блок аккордеон, css3, html5, создать аккордеон" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>  
+    html, body {
+    height: 100%
+    }
+    body {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 14px;
+    color: #555;
+    background: #ededed;
+    margin: 0
+    }
+    h1 {
+      padding: 25px 0;
+      font-weight: 400;
+      text-align: center
+    }
+    .top-nav {
+    background: #555555;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    left: 0;
+    opacity: 0.95;
+    padding: 8px;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    margin: 0 auto
+    }
+    .topnav-wrapper {
+    margin: 0 auto;
+    max-width: 980px
+    }
+    .top-nav a{
+    color: #b8b8b8;
+    text-decoration: none; 
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5)
+    }
+    .top-nav a:hover{
+    color: #ddd
+    }
+    .topnav-right {
+    float: right
+    }
+    .demo-wrap {
+      width:100%;
+      max-width: 960px;
+      margin: 25px auto;
+      padding: 0
+    }  
+    </style>
+</head>
+<body>
+   <div class="demo-wrap">
+            <h1>
+               Отзывчивый аккордеон с помощью jQuery
+            </h1>
+    <!-- блок аккордеон -->
+        <div class="accordion">
+            <section class="accordion_item">
+                <h3 class="title_block">Заголовок Панели №1</h3>
+                <div class="info">
+                    <p class="info_item">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</p>
+                    <p class="info_item">Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+                </div>
+            </section>
+            <section class="accordion_item">
+                <h3 class="title_block">Заголовок Панели №2</h3>
+                <div class="info">
+                    <p class="info_item"><img src="http://placephant.com/300" class="img-left">Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</p>
+                    <p class="info_item">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+                </div>
+            </section>
+            <section class="accordion_item">
+                <h3 class="title_block">Заголовок Панели №3</h3>
+                <div class="info">
+                    <p class="info_item"><img src="http://placephant.com/300" class="img-right">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+                    <p class="info_item">Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.</p>
+                </div>
+            </section>
+        </div>
+    <!-- конец блока аккордеон -->    
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script type="text/javascript">
+    ! function(i) {
+      var o, n;
+      i(".title_block").on("click", function() {
+        o = i(this).parents(".accordion_item"), n = o.find(".info"),
+          o.hasClass("active_block") ? (o.removeClass("active_block"),
+            n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
+            o.siblings(".active_block").removeClass("active_block").children(
+              ".info").stop(!0, !0).slideUp())
+      })
+    }(jQuery);
+   </script>
+</body>
+</html>
+
+
+
+

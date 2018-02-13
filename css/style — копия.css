@@ -1,0 +1,81 @@
+.block{
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: 'Belleza', sans-serif;
+    background: #F7F7F7;
+}
+
+.logo{
+    color: #1c7430;
+    font-size: 80%;
+    font-weight: 900;
+}
+.logo:hover{
+    color: #5cb85c;
+}
+/*================Верхнее меню======================*/
+
+.navbar{
+    text-transform: uppercase;
+    background: #000;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/*================Прокрутка для левого меню======================*/
+.nav{
+    /*overflow-y: scroll;*/
+    /*background: #FAFAFA;*/
+    /*height: 700px;*/
+    text-transform: uppercase;
+}
+/*================Убираем проблемы с при клике по navbaru======================*/
+button.navbar-toggler.navbar-toggler-right{
+    z-index: 10;
+}
+
+.log{
+    font-family: 'Pacifico', cursive;
+    background: #48C4C4;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 987px) {
+    .logo{
+        font-size: 25px;
+    }
+    .navbar{
+        background: #F7F7F7;
+        text-transform: uppercase;
+        border: 1px solid #F7F7F7;
+        border-radius: 3px;
+    }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
